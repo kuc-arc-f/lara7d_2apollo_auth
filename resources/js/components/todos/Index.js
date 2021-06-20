@@ -1,6 +1,6 @@
+//import React ,{useState, useEffect } from 'react';
 import React  from 'react';
 import { Link } from 'react-router-dom';
-//import axios  from 'axios';
 import LibAuth from '../../lib/LibAuth'
 import IndexRow from './IndexRow';
 //import LibTodo from '../../libs/LibTodo';
@@ -13,8 +13,7 @@ function TodosIndex(props) {
     fetchPolicy: "network-only"
   })  
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
-console.log(data.todos)
+
   return (
     <div className="container py-2">
       <h3>Todos - index</h3>

@@ -17,6 +17,10 @@ import todoEdit from './todos/Edit';
 import userCreate from './user/Create';
 import userLogin from './user/Login';
 import userLogout from './user/Logout';
+/* articles */
+import articles from './articles/Index';
+import articleCreate from './articles/Create';
+import articleShow from './articles/Show';
 
 class App extends Component {
   render() {
@@ -36,7 +40,12 @@ class App extends Component {
           <Route path='/todos' component={todos} />
           <Route path='/todo_show/:id' component={todoShow}/>
           <Route path='/todos_create' component={todoCreate} />
-          <Route path='/todo_edit/:id' component={todoEdit} />          
+          <Route path='/todo_edit/:id' component={todoEdit} /> 
+          {/* articles */}
+          <Route path='/articles' component={articles} />
+          <Route path='/article_crate' component={articleCreate} />
+          <Route path='/article_show/:id' component={articleShow}/>
+
         </ApolloProvider>
         </div>
       </Router>
